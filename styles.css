@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 250, 250);
+}
+
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: blur(3px) brightness(0.5);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #555;
+}
+
+/* Card Section */
+.card-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 370px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Responsive Design for Cards */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+
+/* About Me Section */
+.about-me {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+.contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+}
